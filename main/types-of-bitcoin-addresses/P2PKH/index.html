@@ -1,0 +1,59 @@
+{#header.html#}
+
+{%title=P2PKH (Pay to Public Key Hash) Bitcoin Addresses%}
+{%description=P2PKH (Pay to Public Key Hash) Bitcoin Addresses%}
+
+<h1>P2PKH (Pay to Public Key Hash) Bitcoin Addresses</h1>
+
+<h2>What are P2PKH Addresses?</h2>
+<p>P2PKH, which stands for "Pay to Public Key Hash," is one of the most standard and widely used types of Bitcoin addresses. These addresses start with the number "1" and are a fundamental part of the Bitcoin network.</p>
+
+<h2>How P2PKH Works</h2>
+<p>P2PKH addresses are created by taking a public key and performing cryptographic operations on it. The process involves:</p>
+<ul>
+    <li>Applying a SHA-256 hash to the public key.</li>
+    <li>Running the result through a RIPEMD-160 hash.</li>
+    <li>Adding network bytes.</li>
+    <li>Generating a checksum.</li>
+    <li>Encoding the result in Base58 to create the final address.</li>
+</ul>
+
+<h2>Why P2PKH?</h2>
+<p>P2PKH addresses are essential for ensuring that only the owner of the corresponding private key can spend the Bitcoins. They provide a layer of security and are fundamental to how Bitcoin transactions work.</p>
+
+<h2>Generating a P2PKH Address in Go</h2>
+<p>Here's an example of how you might generate a P2PKH address in Go:</p>
+<pre><code>package main
+
+import (
+    "fmt"
+    "crypto/sha256"
+    "golang.org/x/crypto/ripemd160"
+    "encoding/hex"
+)
+
+func main() {
+    // Replace this with your public key
+    publicKey := "yourPublicKeyInHexFormat"
+
+    // Step 1: SHA256 hashing of the public key
+    shaHasher := sha256.New()
+    shaHasher.Write([]byte(publicKey))
+    shaHashed := shaHasher.Sum(nil)
+
+    // Step 2: RIPEMD-160 hashing on the result of SHA-256
+    ripemdHasher := ripemd160.New()
+    ripemdHasher.Write(shaHashed)
+    ripemdHashed := ripemdHasher.Sum(nil)
+
+    // Further steps would involve adding network bytes, generating checksum, and Base58 encoding
+    // These steps are omitted for brevity
+
+    // Output the RIPEMD-160 hash as an example
+    fmt.Println("RIPEMD-160 Hash: ", hex.EncodeToString(ripemdHashed))
+}
+</code></pre>
+
+<p>Note: This code provides a basic example and does not include all the steps necessary for creating a fully valid Bitcoin address, such as adding network bytes, generating a checksum, and Base58Check encoding.</p>
+
+{#bottom.html#}
