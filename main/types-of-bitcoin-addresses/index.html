@@ -1,0 +1,20 @@
+{#header.html#}
+
+{%title=BitCoin - Types of addresses%}
+{%description=BitCoin - Types of addresses%}
+
+<h1>Types of Bitcoin Addresses</h1>
+
+<h2>1. P2PKH (Pay to Public Key Hash)</h2>
+<p>This is the most standard and common type of address, starting with "1". It represents a hash of the user's public key. This was the first type of address used in Bitcoin.</p>
+
+<h2>2. P2SH (Pay to Script Hash)</h2>
+<p>These addresses start with "3". They are used for transactions that require the execution of a specific script, such as multisig transactions.</p>
+
+<h2>3. Bech32 (also known as "bc1 addresses")</h2>
+<p>This is a new format of addresses introduced with the SegWit (Segregated Witness) update. They start with "bc1" and feature lower transaction fees and improved resistance to input errors.</p>
+
+<h2>4. P2WPKH (Pay to Witness Public Key Hash) and P2WSH (Pay to Witness Script Hash)</h2>
+<p>These are variants of Bech32 addresses, designed for optimizing transaction size and efficiency. P2WPKH is used for single-signature transactions, while P2WSH is for more complex script transactions.</p>
+
+{#bottom.html#}
