@@ -1,0 +1,38 @@
+{#header.html#}
+
+{%title=How Nodes Find Each Other in the Bitcoin P2P Network%}
+{%description=How Nodes Find Each Other in the Bitcoin P2P Network%}
+
+<h1>How Nodes Find Each Other in the Bitcoin P2P Network</h1>
+
+<h2>Introduction</h2>
+<p>The Bitcoin network operates as a peer-to-peer (P2P) network, where each node must discover and connect to peers. This article explores the mechanisms behind node discovery in Bitcoin's P2P network.</p>
+
+<div style="text-align: center;">
+    <img style="max-width: 300px;" src="bitcoin-p2p-network.png"/>
+</div>
+
+<h2>Node Discovery Methods</h2>
+
+<h3>1. Static Address Lists</h3>
+<p>Initially, Bitcoin nodes come with a list of known addresses (IPs) of other nodes. This hardcoded list serves as the starting point for a new node. However, this method is not dynamic and can quickly become outdated.</p>
+
+<h3>2. DNS Seeding</h3>
+<p>When a node first joins the network, it uses DNS seeding to obtain a list of active nodes. The node queries a DNS server, which returns a list of IP addresses belonging to active Bitcoin nodes. This method helps new nodes to quickly find peers.</p>
+
+<h3>3. Peer Exchange (PEX)</h3>
+<p>After initial connections, nodes use Peer Exchange (PEX) to share information about other known peers. This method relies on the existing network of nodes and helps in decentralizing the discovery process.</p>
+
+<h3>4. Address Messages</h3>
+<p>Nodes periodically exchange 'addr' messages containing IP addresses of known peers. This mechanism ensures nodes have a regularly updated list of potential peers.</p>
+
+<h2>Connecting to Peers</h2>
+<p>Once a node has a list of peer addresses, it attempts to establish connections. Bitcoin nodes typically form outbound connections to a subset of these peers. Connection attempts are governed by specific rules such as preferring to connect to nodes running the same or higher protocol versions.</p>
+
+<h2>Network Discovery Challenges</h2>
+<p>Despite these mechanisms, network discovery in Bitcoin can face challenges like address censorship, eclipse attacks, or reliance on a small number of DNS seeds. Ongoing development efforts aim to enhance the robustness and decentralization of node discovery in the Bitcoin network.</p>
+
+<h2>Conclusion</h2>
+<p>Understanding how nodes find each other in the Bitcoin network is crucial for maintaining the health and decentralization of the P2P network. The combination of static lists, DNS seeding, PEX, and address messages offers a multifaceted approach to node discovery, but continuous improvements are necessary to address emerging challenges.</p>
+
+{#bottom.html#}
