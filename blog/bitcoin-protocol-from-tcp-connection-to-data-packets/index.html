@@ -1,0 +1,52 @@
+{#header.html#}
+
+{%title=Bitcoin Protocol: From TCP Connection to Data Packets%}
+{%description=Bitcoin Protocol: From TCP Connection to Data Packets%}
+
+<h1>Bitcoin Protocol: From TCP Connection to Data Packets</h1>
+        <section>
+            <h2>TCP Connection</h2>
+            <p>
+                Bitcoin utilizes the Transmission Control Protocol (TCP) to facilitate data exchange between nodes. Nodes in the Bitcoin network typically listen for incoming connections on port 8333. During the initiation of a connection, nodes exchange messages to verify compatibility and synchronize.
+            </p>
+        </section>
+        <section>
+            <h2>Message Format</h2>
+            <p>
+                Messages within the Bitcoin network follow a specific format, comprising a header and a message body. The header contains essential information for message identification and validation, including its length and checksum. The message body carries the actual information being transmitted.
+            </p>
+        </section>
+        <section>
+            <h2>Types of Messages</h2>
+            <ul>
+                <li><strong>version</strong>: A message for establishing a connection between nodes, containing the node's protocol version information.</li>
+                <li><strong>verack</strong>: A response to the version message, confirming the establishment of a connection.</li>
+                <li><strong>ping</strong> and <strong>pong</strong>: Keep-alive messages to maintain and check the connection's integrity.</li>
+                <li><strong>addr</strong>: Communicates the IP addresses of other nodes.</li>
+                <li><strong>inv</strong>: Informs other nodes about new transactions or blocks.</li>
+                <li><strong>getdata</strong>: A request for specific transactions or blocks.</li>
+                <li><strong>block</strong>: Contains complete block data.</li>
+                <li><strong>tx</strong>: Contains transaction data.</li>
+                <li><strong>getblocks</strong> and <strong>getheaders</strong>: Requests for block information.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Data Exchange and Verification</h2>
+            <p>
+                After establishing a connection, nodes exchange information about available blocks and transactions. Upon receiving a new transaction or block, a node verifies them to ensure their validity and compliance with Bitcoin network rules.
+            </p>
+        </section>
+        <section>
+            <h2>Blockchain Synchronization</h2>
+            <p>
+                New nodes connecting to the network must synchronize the existing blockchain. This is achieved by requesting and sequentially downloading blocks from other network nodes.
+            </p>
+        </section>
+        <section>
+            <h2>Relaying Transactions and Blocks</h2>
+            <p>
+                Once a transaction or block is verified, it is relayed to other nodes in the network, ensuring its dissemination throughout the network.
+            </p>
+        </section>
+
+{#bottom.html#}
