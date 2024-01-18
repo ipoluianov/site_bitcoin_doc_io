@@ -373,13 +373,13 @@ html {
 }
 
 body {
-    font-family: Arial,sans-serif;
+    font-family: Calibri,sans-serif;
     font-style: normal;
     font-size: 14pt;
     line-height: 1.5;
     font-weight: 200;
     background-color: #171717;
-    color: #EEEEEE;
+    color: #DDDDDD;
 }
 
 p {
@@ -390,7 +390,7 @@ h1 {
     font-size: 36pt;
     margin-bottom: 20px;
     font-weight: 300;
-    color: #FFFFFF;
+    color: #DDDDDD;
 }
 
 h2 {
@@ -398,7 +398,7 @@ h2 {
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #FFFFFF;
+    color: #DDDDDD;
 }
 
 pre {
