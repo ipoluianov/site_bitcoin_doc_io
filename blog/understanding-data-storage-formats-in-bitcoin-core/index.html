@@ -1,0 +1,66 @@
+{#header.html#}
+
+{%title=Understanding Data Storage Formats in Bitcoin Core%}
+{%description=Understanding Data Storage Formats in Bitcoin Core%}
+
+<h1>Understanding Data Storage Formats in Bitcoin Core</h1>
+<p>Bitcoin Core, since its inception, has evolved in the way it stores data about blocks and transactions. This article dives into the formats used for data storage in Bitcoin Core, providing insights for developers and enthusiasts alike.</p>
+
+<h2>Block Index and Chain State</h2>
+<p>Since version 0.8, Bitcoin Core uses two primary databases: the block index and the chain state.</p>
+<ul>
+    <li>The <strong>block index</strong> (<code>$DATADIR/blocks/index</code>) maintains information about each block and its location on disk.</li>
+    <li>The <strong>chain state</strong> (<code>$DATADIR/chainstate</code>) contains information about the state of validation resulting from the currently known best chain, storing all spendable transaction outputs (UTXOs) and relevant metadata.</li>
+</ul>
+
+<div style="text-align: center;">
+    <img style="max-width: 300px;" src="bitcoin-data-storage.png"/>
+</div>
+
+<h2>Storage Formats in Block Index</h2>
+<p>The block index stores detailed information about each block, including:</p>
+<ul>
+    <li>Block header</li>
+    <li>Block height</li>
+    <li>Number of transactions</li>
+    <li>Validation status of the block</li>
+    <li>Location of block data and undo data in files</li>
+</ul>
+
+<h2>Storage Formats in Chain State</h2>
+<p>Chain state database stores records for transactions with unspent outputs, including:</p>
+<ul>
+    <li>Transaction version</li>
+    <li>Coinbase status</li>
+    <li>Block height containing the transaction</li>
+    <li>Unspent outputs and their details (scriptPubKey, amount)</li>
+</ul>
+
+<h2>Additional Files and Databases</h2>
+<p>Bitcoin Core uses various files and databases for additional data storage:</p>
+<ul>
+    <li><code>blocks/</code>: Contains actual Bitcoin blocks in network format.</li>
+    <li><code>chainstate/</code>: LevelDB database for blockchain state.</li>
+    <li><code>indexes/txindex/</code>: Optional transaction index database.</li>
+    <li><code>wallets/</code>: Stores wallets, which can be either Berkeley DB or SQLite databases.</li>
+</ul>
+
+<h2>File Formats</h2>
+<p>Key file formats include:</p>
+<ul>
+    <li><code>blkNNNNN.dat</code>: Actual Bitcoin blocks.</li>
+    <li><code>revNNNNN.dat</code>: Block undo data files.</li>
+    <li><code>wallet.dat</code>: Personal wallet file.</li>
+</ul>
+
+<h2>Other Files</h2>
+<p>Bitcoin Core also uses various other files for storing data:</p>
+<ul>
+    <li><code>peers.dat</code>: Peer IP address database.</li>
+    <li><code>mempool.dat</code>: Mempool transactions dump.</li>
+</ul>
+
+<h2>Version Compatibility and Updates</h2>
+<p>With each new release of Bitcoin Core, changes to data storage formats may be introduced. It is advisable to refer to the latest sources for up-to-date information.</p>
+
+{#bottom.html#}
