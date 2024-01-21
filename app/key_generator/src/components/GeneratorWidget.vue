@@ -108,6 +108,7 @@ export default {
 .content {
     margin-bottom: 10px;
     font-size: 14pt;
+    overflow-wrap: break-word;
 }
 
 .header-small {
@@ -116,6 +117,7 @@ export default {
 
 .content-small {
     font-size: 10pt;
+    overflow-wrap: break-word;
 }
 
 .btn {
