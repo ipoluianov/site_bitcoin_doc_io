@@ -6,28 +6,28 @@
         <div class="block">
             <div class="header">Address - BECH32</div>
             <div class="content">
-                <pre>{{ addr_bech32 }}</pre>
+                {{ addr_bech32 }}
             </div>
         </div>
 
         <div class="block">
             <div class="header">Address - P2PKH</div>
             <div class="content">
-                <pre>{{ addr_p2pkh }}</pre>
+                {{ addr_p2pkh }}
             </div>
         </div>
 
         <div class="block">
             <div class="header">Private Key (WIF)</div>
             <div class="content">
-                <pre>{{ privateKeyUc }}</pre>
+                {{ privateKeyUc }}
             </div>
         </div>
 
         <div class="block">
             <div class="header-small">privateKeyC</div>
             <div class="content-small">
-                <pre>{{ privateKeyC }}</pre>
+                {{ privateKeyC }}
             </div>
         </div>
 
@@ -41,7 +41,7 @@
         <div class="block">
             <div class="header-small">Address - P2PKH - HEX</div>
             <div class="content-small">
-                <pre>{{ addr_p2pkh_hex }}</pre>
+                {{ addr_p2pkh_hex }}
             </div>
         </div>
 
@@ -49,7 +49,7 @@
         <div class="block">
             <div class="header-small">addr_p2sh</div>
             <div class="content-small">
-                <pre>{{ addr_p2sh }}</pre>
+                {{ addr_p2sh }}
             </div>
         </div>
     </div>
