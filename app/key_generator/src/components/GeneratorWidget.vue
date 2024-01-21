@@ -35,9 +35,9 @@
         </div>
 
         <div class="block">
-            <div class="header-small">Public Key Compressed</div>
+            <div class="header-small">Public Key Uncompressed</div>
             <div class="content-small">
-                {{ publicKeyC }}
+                {{ publicKeyUc }}
             </div>
         </div>
 
