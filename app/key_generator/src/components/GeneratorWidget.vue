@@ -1,9 +1,6 @@
 <template>
     <div style="text-align: left; display: flex; flex-direction: column;">
         <div class="block">
-            <button class="btn" @click="generate">GENERATE</button>
-        </div>
-        <div class="block">
             <div class="header">Address - BECH32</div>
             <div class="content">
                 {{ addr_bech32 }}
@@ -22,6 +19,10 @@
             <div class="content">
                 {{ privateKeyUc }}
             </div>
+        </div>
+
+        <div class="block">
+            <button class="btn" @click="generate">GENERATE</button>
         </div>
 
         <div class="block">
@@ -109,6 +110,7 @@ export default {
     font-size: 14pt;
     overflow-wrap: break-word;
     font-family: monospace;
+    min-height: 30pt;
 }
 
 .header-small {
@@ -126,5 +128,6 @@ export default {
     color: white;
     width: 120px;
     height: 40px;
+    border: 1px solid #ffffff;
 }
 </style>
