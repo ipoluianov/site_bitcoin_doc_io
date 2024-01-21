@@ -1,5 +1,5 @@
 <template>
-    <div style="text-align: left; display: flex; flex-direction: column; !max-width: 300px;">
+    <div style="text-align: left; display: flex; flex-direction: column;">
         <div class="block">
             <button class="btn" @click="generate">GENERATE</button>
         </div>
@@ -98,7 +98,6 @@ export default {
 
 <style scoped>
 .block {
-    max-width: 300px;
 }
 
 .header {
