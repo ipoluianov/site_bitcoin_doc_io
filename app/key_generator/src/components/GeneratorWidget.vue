@@ -74,7 +74,7 @@ export default {
         async generate() {
             console.log("123");
             try {
-                const response = await fetch('https://u00.io:8488/api/bitcoin/generate_keys',);
+                const response = await fetch('https://rusty.u00.io:8488/api/bitcoin/generate_keys',);
                 const json = await response.json();
                 console.log(json)
 
