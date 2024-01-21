@@ -1,7 +1,7 @@
 <template>
     <div style="text-align: left; display: flex; flex-direction: column; !max-width: 300px;">
         <div class="block">
-            <button @click="generate">GENERATE</button>
+            <button class="btn" @click="generate">GENERATE</button>
         </div>
         <div class="block">
             <div class="header">Address - BECH32</div>
@@ -116,5 +116,12 @@ export default {
 
 .content-small {
     font-size: 10pt;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    width: 120px;
+    height: 40px;
 }
 </style>
