@@ -26,7 +26,7 @@
         </div>
 
         <div class="block">
-            <div class="header-small">privateKeyC</div>
+            <div class="header-small">Private Key C</div>
             <div class="content-small">
                 {{ privateKeyC }}
             </div>
@@ -46,9 +46,8 @@
             </div>
         </div>
 
-
         <div class="block">
-            <div class="header-small">addr_p2sh</div>
+            <div class="header-small">Address - P2SH</div>
             <div class="content-small">
                 {{ addr_p2sh }}
             </div>
@@ -70,6 +69,9 @@ export default {
             addr_bech32: "",
             addr_p2sh: "",
         };
+    },
+    beforeMount() {
+        this.generate()
     },
     methods: {
         async generate() {
@@ -98,8 +100,7 @@ export default {
 </script>
 
 <style scoped>
-.block {
-}
+.block {}
 
 .header {
     font-size: 24pt;
@@ -128,6 +129,6 @@ export default {
     color: white;
     width: 120px;
     height: 40px;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
 }
 </style>
