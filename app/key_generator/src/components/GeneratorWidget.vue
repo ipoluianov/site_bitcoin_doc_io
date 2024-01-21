@@ -25,7 +25,9 @@
             <button class="btn" @click="generate">GENERATE</button>
         </div>
 
-        <div style="height: 50px;"></div>
+        <div style="height: 20px;"></div>
+        <div>Do not use this information for real assets</div>
+        <div style="height: 20px;"></div>
 
         <div class="block">
             <div class="header-small">Private Key C</div>
