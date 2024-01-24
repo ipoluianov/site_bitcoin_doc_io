@@ -746,3 +746,6 @@ a.link_in_text {
 .sensor_data_items {
 }
 
+strong {
+    font-weight: bold;
+}
